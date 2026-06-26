@@ -461,7 +461,7 @@ React.useState(true);
   React.useEffect(() => {
 
   fetch(
-    "https://portfolio-xi-three-91.vercel.app/api/projects"
+    "/projects"
   )
     .then(res => res.json())
     .then(data => {
