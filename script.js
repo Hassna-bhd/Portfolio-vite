@@ -461,7 +461,7 @@ React.useState(true);
   React.useEffect(() => {
 
   fetch(
-    "/projects"
+    "/api/projects"
   )
     .then(res => res.json())
     .then(data => {
