@@ -532,7 +532,10 @@ React.useState(true);
   );
 
 }
-ReactDOM.render(
+/*ReactDOM.render(
   <App />,
   document.getElementById("root")
+);*/
+ReactDOM.createRoot(document.getElementById("root")).render(
+  React.createElement(App)
 );
