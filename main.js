@@ -105,9 +105,11 @@ function Footer() {
 
 /* APP */
 function App() {
-  const [projects, setProjects] = React.useState([]);
-  const [darkMode, setDarkMode] = React.useState(true);
+
   const [loading, setLoading] = React.useState(true);
+  const [loaded, setLoaded] = React.useState(false);
+  const [darkMode, setDarkMode] = React.useState(true);
+  const [projects, setProjects] = React.useState([]);
 
   React.useEffect(() => {
     fetch("https://portfolio-vite-virid-xi.vercel.app/api/projects")
@@ -116,10 +118,13 @@ function App() {
   }, []);
 
   React.useEffect(() => {
-    setTimeout(() => setLoading(false), 1500);
+    setTimeout(() => setLoaded(true), 1200);
+    setTimeout(() => setLoading(false), 2000);
   }, []);
 
-  if (loading) return React.createElement(Loader);
+  if (loading) {
+    return React.createElement(Loader, { loaded });
+  }
 
   return React.createElement(
     "div",
@@ -130,7 +135,17 @@ function App() {
     React.createElement(Skills),
     React.createElement(Projects, { projects }),
     React.createElement(Contact),
-    React.createElement(Footer)
+    React.createElement(Footer),
+
+    React.createElement(
+      "button",
+      {
+        className: "back-to-top",
+        onClick: () =>
+          window.scrollTo({ top: 0, behavior: "smooth" })
+      },
+      "↑"
+    )
   );
 }
 ReactDOM.createRoot(document.getElementById("root"))
