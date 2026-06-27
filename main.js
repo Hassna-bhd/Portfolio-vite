@@ -34,15 +34,19 @@ function Navbar({ darkMode, setDarkMode }) {
   );
 }
 
-/* HERO */
-function Hero() {
+/* HERO */function Hero() {
   return React.createElement(
     "section",
     { id: "hero", className: "hero-section container" },
 
-    React.createElement("div", { className: "row align-items-center" },
+    React.createElement(
+      "div",
+      { className: "row align-items-center" },
 
-      React.createElement("div", { className: "col-lg-6 order-2 order-lg-1" },
+      // LEFT TEXT
+      React.createElement(
+        "div",
+        { className: "col-lg-6" },
 
         React.createElement("span", { className: "hero-badge" }, "Hi, I'm Hassna 👋"),
 
@@ -53,11 +57,15 @@ function Hero() {
           React.createElement("span", { className: "text-info" }, "Developer")
         ),
 
-        React.createElement("p", { className: "hero-subtitle" },
+        React.createElement(
+          "p",
+          { className: "hero-subtitle" },
           "I build modern, responsive and user-friendly web applications using React, JavaScript and modern web technologies."
         ),
 
-        React.createElement("div", { className: "hero-buttons" },
+        React.createElement(
+          "div",
+          { className: "hero-buttons" },
 
           React.createElement("a", {
             href: "#projects",
@@ -71,10 +79,15 @@ function Hero() {
         )
       ),
 
-      React.createElement("div", { className: "col-lg-6 text-center" },
+      // RIGHT IMAGE
+      React.createElement(
+        "div",
+        { className: "col-lg-6 text-center" },
+
         React.createElement("img", {
           src: "./images/Logo.png",
-          className: "hero-logo"
+          className: "hero-logo",
+          style: { maxWidth: "280px" }
         })
       )
     )
