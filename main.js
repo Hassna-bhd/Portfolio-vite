@@ -15,25 +15,120 @@ function Loader() {
 
 /* NAVBAR */
 function Navbar({ darkMode, setDarkMode }) {
-  return React.createElement("nav", { className: "navbar navbar-expand-lg" },
-    React.createElement("div", { className: "container-fluid" },
+  return React.createElement(
+    React.Fragment,
+    null,
 
-      React.createElement("a", { className: "navbar-brand" },
-        React.createElement("img", {
-          src: "./images/Logo.png",
-          className: "navbar-logo"
-        })
-      ),
+    React.createElement(
+      "nav",
+      { className: "navbar navbar-expand-lg" },
 
-      React.createElement("button", {
-        className: "btn btn-outline-light",
+      React.createElement(
+        "div",
+        { className: "container-fluid" },
+
+        React.createElement(
+          "a",
+          { className: "navbar-brand", href: "#" },
+          React.createElement("img", {
+            src: "./images/Logo.png",
+            className: "navbar-logo"
+          })
+        ),
+
+        React.createElement(
+          "button",
+          {
+            className: "navbar-toggler",
+            type: "button",
+            "data-bs-toggle": "collapse",
+            "data-bs-target": "#navbarMenu",
+            "aria-controls": "navbarMenu",
+            "aria-expanded": "false",
+            "aria-label": "Toggle navigation"
+          },
+          React.createElement("span", {
+            className: "navbar-toggler-icon"
+          })
+        ),
+
+        React.createElement(
+          "div",
+          {
+            className: "collapse navbar-collapse",
+            id: "navbarMenu"
+          },
+
+          React.createElement(
+            "ul",
+            { className: "navbar-nav ms-auto" },
+
+            React.createElement(
+              "li",
+              { className: "nav-item" },
+              React.createElement(
+                "a",
+                {
+                  className: "nav-link",
+                  href: "#hero"
+                },
+                "About"
+              )
+            ),
+
+            React.createElement(
+              "li",
+              { className: "nav-item" },
+              React.createElement(
+                "a",
+                {
+                  className: "nav-link",
+                  href: "#skills"
+                },
+                "Skills"
+              )
+            ),
+
+            React.createElement(
+              "li",
+              { className: "nav-item" },
+              React.createElement(
+                "a",
+                {
+                  className: "nav-link",
+                  href: "#projects"
+                },
+                "Projects"
+              )
+            ),
+
+            React.createElement(
+              "li",
+              { className: "nav-item" },
+              React.createElement(
+                "a",
+                {
+                  className: "nav-link",
+                  href: "#contact"
+                },
+                "Contact"
+              )
+            )
+          )
+        )
+      )
+    ),
+
+    React.createElement(
+      "button",
+      {
+        className: "theme-btn btn btn-outline-light",
         onClick: () => setDarkMode(!darkMode)
-      }, darkMode ? "Light" : "Dark")
-
+      },
+      darkMode ? "Light" : "Dark"
     )
   );
 }
-
 /* HERO */function Hero() {
   return React.createElement(
     "section",
