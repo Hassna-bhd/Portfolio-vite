@@ -139,10 +139,10 @@ function Hero() {
       "div",
       { className: "row align-items-center" },
 
-      // LEFT TEXT
+      // LEFT
       React.createElement(
         "div",
-        { className: "col-lg-6" },
+        { className: "col-lg-6 order-2 order-lg-1" },
 
         React.createElement("span", { className: "hero-badge" }, "Hi, I'm Hassna 👋"),
 
@@ -159,37 +159,49 @@ function Hero() {
           "I build modern, responsive and user-friendly web applications using React, JavaScript and modern web technologies."
         ),
 
+        // ✅ AJOUT ICI : HERO STATS
         React.createElement(
           "div",
-          { className: "hero-buttons" },
+          { className: "hero-stats mt-5" },
 
-          React.createElement("a", {
-            href: "#projects",
-            className: "btn btn-info btn-lg"
-          }, "View Projects"),
+          React.createElement(
+            "div",
+            { className: "stat-item" },
+            React.createElement("h3", null, "5+"),
+            React.createElement("span", null, "Projects")
+          ),
 
-          React.createElement("a", {
-            href: "#contact",
-            className: "btn btn-outline-light btn-lg"
-          }, "Contact Me")
+          React.createElement(
+            "div",
+            { className: "stat-item" },
+            React.createElement("h3", null, "100%"),
+            React.createElement("span", null, "Responsive")
+          ),
+
+          React.createElement(
+            "div",
+            { className: "stat-item" },
+            React.createElement("h3", null, "React"),
+            React.createElement("span", null, "Developer")
+          )
         )
       ),
 
-      // RIGHT IMAGE
+      // RIGHT
       React.createElement(
         "div",
-        { className: "col-lg-6 text-center" },
+        {
+          className: "col-lg-6 order-1 order-lg-2 text-center hero-img-wrapper"
+        },
 
         React.createElement("img", {
           src: "./images/Logo.png",
-          className: "hero-logo",
-          style: { maxWidth: "280px" }
+          className: "hero-logo"
         })
       )
     )
   );
-}
-/* SKILLS */
+}/* SKILLS */
 function Skills() {
 
   const skills = [
