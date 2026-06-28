@@ -430,6 +430,26 @@ body{
   transform-style: preserve-3d;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   will-change: transform;
+  opacity:0;
+  transform:translateY(40px);
+  animation:skillAppear .8s ease forwards;
+}
+.skill-card:nth-child(1){animation-delay:.1s;}
+.skill-card:nth-child(2){animation-delay:.2s;}
+.skill-card:nth-child(3){animation-delay:.3s;}
+.skill-card:nth-child(4){animation-delay:.4s;}
+.skill-card:nth-child(5){animation-delay:.5s;}
+.skill-card:nth-child(6){animation-delay:.6s;}
+
+@keyframes skillAppear{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 .skill-card:hover{
   transform: translateY(-10px) rotateX(10deg) rotateY(-10deg) scale(1.05);
