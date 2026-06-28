@@ -158,7 +158,28 @@ function Hero() {
           { className: "hero-subtitle" },
           "I build modern, responsive and user-friendly web applications using React, JavaScript and modern web technologies."
         ),
+        React.createElement(
+  "div",
+  { className: "hero-buttons" },
 
+  React.createElement(
+    "a",
+    {
+      href: "#projects",
+      className: "btn btn-info btn-lg"
+    },
+    "View Projects"
+  ),
+
+  React.createElement(
+    "a",
+    {
+      href: "#contact",
+      className: "btn btn-outline-light btn-lg"
+    },
+    "Contact Me"
+  )
+),
         React.createElement(
           "div",
           { className: "hero-stats mt-5" },
